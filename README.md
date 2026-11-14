@@ -24,9 +24,11 @@ git add -A && git commit -m "update plugins" && git push
 (`/mnt/c/Program Files/JetBrains/*/product-info.json`, или явно `--build PS-263.7307.215`), скачивает через
 `downloads.marketplace.jetbrains.com`. `--dry-run` только показывает, что нового.
 
-Конкретная версия по ссылке со страницы Marketplace (в том числе bundled-плагины, которых ещё нет в репо):
+Добавить плагин, которого ещё нет в репо (в том числе bundled), по ссылке на Marketplace.
+Страница плагина берёт последнюю совместимую версию, страница версии берёт именно её:
 
 ```bash
+python3 tools/fetch_updates.py https://plugins.jetbrains.com/plugin/7724-docker
 python3 tools/fetch_updates.py https://plugins.jetbrains.com/plugin/33314-air/versions/stable/1220002
 ```
 

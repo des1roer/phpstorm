@@ -61,23 +61,22 @@ def latest_update(xml_id, platform):
     return {}
 
 
-def update_id_from(text):
+def parse_ref(text):
     match = re.search(r"[?&]updateId=(\d+)", text) or re.search(r"/versions/[^/]+/(\d+)", text)
     if match:
-        return int(match.group(1))
+        return "update", int(match.group(1))
     if text.isdigit():
-        return int(text)
-    sys.exit(f"no updateId in {text!r}: expected https://plugins.jetbrains.com/plugin/<id>-<name>/versions/<channel>/<updateId>")
+        return "update", int(text)
+    match = re.search(r"/plugin/(\d+)", text)
+    if match:
+        return "plugin", int(match.group(1))
+    sys.exit(f"unrecognized {text!r}: expected a Marketplace plugin page, version page URL or updateId")
 
 
-def explicit_updates(refs):
-    found = {}
-    for ref in refs:
-        update_id = update_id_from(ref.strip())
-        meta = get_json(f"{API}/api/updates/{update_id}")
-        xml_id = get_json(f"{API}/api/plugins/{meta['pluginId']}")["xmlId"]
-        found[update_id] = (xml_id, meta["version"], "url")
-    return found
+def explicit_update(update_id):
+    meta = get_json(f"{API}/api/updates/{update_id}")
+    xml_id = get_json(f"{API}/api/plugins/{meta['pluginId']}")["xmlId"]
+    return {update_id: (xml_id, meta["version"], "url")}
 
 
 def cdn_url(file_path):
@@ -119,18 +118,24 @@ def main():
     parser.add_argument("--os", default="Windows 11.0", help="OS sent to Marketplace for platform-specific plugins")
     parser.add_argument("--arch", default="X86_64")
     parser.add_argument("--platform", default="windows-x86_64", help="file name suffix of platform-specific builds to keep")
-    parser.add_argument("refs", nargs="*", help="only these versions: Marketplace version page URL or updateId")
+    parser.add_argument("refs", nargs="*", help="only these: Marketplace plugin page or version page URL, or updateId")
     args = parser.parse_args()
 
     local = gen.collect(args.dir)
     have = {(p["id"], p["version"]) for p in local}
     xml_ids = sorted({p["id"] for p in local})
 
+    candidates = {}
     if args.refs:
-        candidates = explicit_updates(args.refs)
-        builds = []
-    else:
-        candidates = {}
+        xml_ids = []
+        for kind, number in (parse_ref(ref.strip()) for ref in args.refs):
+            if kind == "update":
+                candidates.update(explicit_update(number))
+            else:
+                xml_ids.append(get_json(f"{API}/api/plugins/{number}")["xmlId"])
+
+    builds = []
+    if xml_ids:
         builds = args.build or installed_builds()
         if not builds:
             sys.exit("no IDE builds: pass --build PS-263.7307.215")

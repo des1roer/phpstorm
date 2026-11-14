@@ -393,6 +393,41 @@ for the latest information and troubleshooting tips.&lt;/p&gt;
 
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;</description>
   </plugin>
+  <plugin id="Docker" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/clouds-docker-impl-263.7307.215.zip" version="263.7307.215">
+    <idea-version since-build="263.7307" until-build="263.*" />
+    <name>Docker</name>
+    <description>&lt;p&gt;Imagine being able to package your entire application with all its code, libraries, and dependencies into a single, portable unit that runs consistently in any environment. That's the benefit offered by the &lt;a href="https://www.jetbrains.com/help/idea/docker.html"&gt;Docker Plugin&lt;/a&gt; for your JetBrains IDE. The plugin also provides official support for Podman, giving you the flexibility to choose the container engine that best suits your needs.&lt;/p&gt;
+
+    &lt;h3&gt;What is Docker?&lt;/h3&gt;
+    &lt;p&gt;Docker is like a shipping container for your code. It wraps everything your application needs into a neat package called a "container" that works the same way on any computer. No more "but it works on my machine" problems!&lt;/p&gt;
+
+    &lt;h3&gt;What Can You Do With Our Docker Plugin?&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;b&gt;Build and Run Containers With a Click&lt;/b&gt; — Create and manage &lt;a href="https://www.jetbrains.com/help/idea/docker-images.html"&gt;Docker Images&lt;/a&gt; and &lt;a href="https://www.jetbrains.com/help/idea/docker-containers.html"&gt;Containers&lt;/a&gt; right from your IDE—no command line needed!&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;See Everything in One Place&lt;/b&gt; — View all your containers, images, networks, and volumes in a clean, organized interface.&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Create Multi-Container Apps Easily&lt;/b&gt; - Manage complex &lt;a href="https://www.jetbrains.com/help/idea/docker-compose.html"&gt;Docker Compose&lt;/a&gt; projects with powerful editing tools and visual feedback.&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Smart Editing for Docker Files&lt;/b&gt; — Write Dockerfiles with syntax highlighting, code completion, and validation that catches mistakes before they cause problems.&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Test in Containers, Debug Like Local&lt;/b&gt; - Run and debug your applications in containers that match your production environment, but with the convenience of local development.&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Watch Your Containers in Action&lt;/b&gt; — Monitor logs, check performance, and connect to running containers with an integrated terminal.&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Choose Your Container Engine&lt;/b&gt; — Work with Docker or &lt;a href="https://www.jetbrains.com/help/idea/podman.html"&gt;Podman&lt;/a&gt; (an alternative container engine) based on your preference.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;Why Use Containers?&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;b&gt;Consistent Environments&lt;/b&gt; — Your application runs the same way in development, testing, and production.&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Faster Onboarding&lt;/b&gt; — New team members can start coding in minutes instead of spending days setting up their environment.&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Isolated Testing&lt;/b&gt; — Test your changes in a container that won't affect your main system.&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Easy Deployment&lt;/b&gt; — Package once, deploy anywhere—from your laptop to the cloud.&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Reproducible Environment&lt;/b&gt; — Develop in a consistent, reproducible environment that matches your production setup.&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Pre-configured Environments&lt;/b&gt; — Quickly onboard new team members with pre-configured development environments.&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Isolation&lt;/b&gt; — Isolate project dependencies and tools without affecting your local machine.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;Getting Started&lt;/h3&gt;
+    &lt;p&gt;To configure the Docker connection, open &lt;b&gt;Settings | Build, Execution, Deployment | Docker&lt;/b&gt;.&lt;/p&gt;
+
+    &lt;p&gt;Learn more in our &lt;a href="https://www.jetbrains.com/help/idea/docker.html"&gt;comprehensive documentation&lt;/a&gt;.&lt;/p&gt;</description>
+  </plugin>
   <plugin id="lv.midiana.misc.phpstorm-plugins.deep-keys" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/deep-assoc-completion.jar" version="2022.08.03.001">
     <idea-version since-build="221.1.1" />
     <name>deep-assoc-completion</name>
@@ -680,5 +715,11 @@ For Mac shortcuts, see &lt;a href="https://www.jetbrains.com/phpstorm/help/keybo
     <idea-version since-build="232.6734" />
     <name>plantuml4idea</name>
     <description>PlantUML diagramming tool integration. Now better and faster, with code navigation and highlighting.</description>
+  </plugin>
+  <plugin id="com.intellij.platform.daemon" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/platform-daemon-plugin-263.7307.278-windows-x86_64.zip" version="263.7307.278-windows-x86_64">
+    <idea-version since-build="263.7307" until-build="263.*" />
+    <name>JetBrains OS Integration</name>
+    <description>Provides operating system integration and &lt;i&gt;jetbrains://&lt;/i&gt; protocol handler support, enabling interaction between your IDE and
+    external developer productivity tools.</description>
   </plugin>
 </plugins>
