@@ -233,6 +233,83 @@ for the latest information and troubleshooting tips.&lt;/p&gt;
 &lt;img width="256px" src="https://user-images.githubusercontent.com/5202330/90446158-95982780-e0e9-11ea-8b79-b7215d68a602.png"/&gt;
     </description>
   </plugin>
+  <plugin id="com.github.deeepamin.gitlabciaid" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/gitlab-ci-aid-2.1.0.zip" version="2.1.0">
+    <idea-version since-build="261" />
+    <name>CI Aid for GitLab</name>
+    <description>&lt;p&gt;Do you frequently work with GitLab CI Yaml files in Intellij and find yourself constantly using &lt;code&gt;Shift Shift&lt;/code&gt; to search 
+for stages, script files or included files? CI Aid for GitLab to the rescue. With this plugin, enjoy automatic &lt;a href="https://gitlab.com"&gt;GitLab&lt;/a&gt;™ schema 
+provision, navigation across elements, stage/job autocompletion, and prominent error notifications when issues are detected 
+in configuration. Reduce errors and accelerate your pipeline development.&lt;/p&gt;
+
+&lt;p&gt;GITLAB is a trademark of GitLab Inc. in the United States and other countries and regions. This plugin is not affiliated, endorsed, sponsored, or approved with or by GitLab Inc.&lt;/p&gt;
+
+&lt;h2&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;Autocomplete &amp;amp; Syntax Highlighting: Write GitLab CI YAML files with confidence. Autocompletion suggestions and multi 
+  level syntax highlighting will make your code easy to navigate and work with.&lt;/li&gt;&lt;li&gt;Local Path Resolution: Effortless navigation with one-click access to scripts, included files, job needs and more.&lt;/li&gt;&lt;li&gt;Remote Includes Caching: Ability to cache remote includes e.g., components, templates etc. to seamlessly work with remote files as local files &lt;/li&gt;&lt;li&gt;Errors and Quick fix: IDE integrated inspections for undefined needs, missing scripts/includes and quick fix to create files on the fly&lt;/li&gt;&lt;li&gt;Script Language Injection: Injection of shell language in script blocks for .sh autocompletes, suggestions and shortcuts&lt;/li&gt;&lt;li&gt;Schema Support: Auto detection of GitLab CI YAML and auto schema configuration, with descriptions, errors and suggestions for GitLab known keywords &lt;/li&gt;&lt;/ul&gt;
+
+&lt;h2&gt;Getting Started&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Installation&lt;/strong&gt;: Download the plugin from JetBrains Marketplace&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Usage&lt;/strong&gt;: Enjoy autocomplete, syntax highlighting, and much more with GitLab CI YAML files.&lt;/li&gt;&lt;/ul&gt;</description>
+  </plugin>
+  <plugin id="com.github.idea-claude-code-gui" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/idea-claude-code-gui-0.5.9.zip" version="0.5.9">
+    <idea-version since-build="233" until-build="263.*" />
+    <name>CC GUI (Claude, Codex and More)</name>
+    <description>&lt;h2&gt;Multi-engine GUI for Claude Code, Codex, OpenCode &amp; more - MIT 100% Open Source&lt;/h2&gt;
+        &lt;h2&gt;Claude Code / Codex / OpenCode 等多引擎GUI MIT 100%开源产品&lt;/h2&gt;
+        &lt;p&gt;支持的 CLI / Supported CLIs:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;Claude Code&lt;/strong&gt; Anthropic 官方 AI 编程助手（支持 Opus 4.6 等多模型）&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;OpenAI Codex&lt;/strong&gt; - OpenAI 强大的代码生成引擎&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Grok CLI&lt;/strong&gt; &lt;em&gt;(Beta)&lt;/em&gt; - xAI 的 Grok 命令行编程助手&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Kimi CLI&lt;/strong&gt; &lt;em&gt;(Beta)&lt;/em&gt; - 月之暗面 Kimi 编程助手&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;OpenCode&lt;/strong&gt; &lt;em&gt;(Beta)&lt;/em&gt; - 开源多模型 AI 编程终端&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;PI CLI&lt;/strong&gt; &lt;em&gt;(Beta)&lt;/em&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;OMP CLI&lt;/strong&gt; &lt;em&gt;(Beta)&lt;/em&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;DeepSeek Harness&lt;/strong&gt; &lt;em&gt;(Beta)&lt;/em&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;p&gt;&lt;strong&gt;Connection &amp;amp; proxy disclosure / 连接与代理说明：&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;By default, requests are sent &lt;strong&gt;directly&lt;/strong&gt; to the official Anthropic API (or OpenAI API for Codex).&lt;/li&gt;
+            &lt;li&gt;Users may optionally configure a third-party or proxy endpoint in &lt;em&gt;Provider Settings&lt;/em&gt;. When a non-official base URL is set, the plugin UI clearly labels the request route as proxied &lt;strong&gt;before&lt;/strong&gt; it is used.&lt;/li&gt;
+            &lt;li&gt;Users can freely switch between direct and proxy modes at any time in the provider settings.&lt;/li&gt;
+            &lt;li&gt;Only when users explicitly enable &lt;em&gt;Local settings.json&lt;/em&gt; or &lt;em&gt;CLI Login&lt;/em&gt; mode, the plugin may honor network proxy variables from &lt;code&gt;~/.claude/settings.json&lt;/code&gt; (e.g. &lt;code&gt;HTTP_PROXY&lt;/code&gt;, &lt;code&gt;HTTPS_PROXY&lt;/code&gt;) for API requests. Managed provider presets do not silently inherit these local proxy variables.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;默认情况下，请求直接发送到 Anthropic（或 OpenAI）官方 API。用户可在供应商设置中选配第三方或代理端点，插件 UI 会在使用前明确标注请求路由方式。用户可随时在直连与代理模式间自由切换。只有当用户显式启用“本地 settings.json”或“CLI Login”模式时，插件才可能继承 &lt;code&gt;~/.claude/settings.json&lt;/code&gt; 中的网络代理变量（如 HTTP_PROXY、HTTPS_PROXY）；普通托管供应商预设不会静默继承这些本地代理变量。&lt;/p&gt;
+
+        &lt;p&gt;&lt;strong&gt;Credential &amp;amp; file-access disclosure / 凭证与文件访问说明：&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;No silent credential scanning.&lt;/strong&gt; The plugin never silently scans your disk for API keys or tokens. All credential sources require &lt;strong&gt;explicit user authorization&lt;/strong&gt; via a confirmation dialog in the plugin UI.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Provider credentials&lt;/strong&gt;: Users enter API keys manually in the provider settings UI, or explicitly authorize reading from &lt;code&gt;~/.claude/settings.json&lt;/code&gt;, or explicitly authorize delegating to the Claude SDK's native OAuth flow (CLI Login). If Claude provider access is revoked or disabled, the plugin does not continue using credentials from &lt;code&gt;~/.claude/settings.json&lt;/code&gt;.&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;MCP server configuration&lt;/strong&gt;: When the user opens the MCP settings page, the plugin reads MCP server definitions (server names, commands, arguments) from &lt;code&gt;~/.claude.json&lt;/code&gt;. This file contains &lt;strong&gt;no credentials or tokens&lt;/strong&gt; — only MCP server configuration metadata managed by the Claude CLI.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;插件不会静默扫描磁盘上的凭证。所有凭证来源均需用户在 UI 中显式授权确认。MCP 服务器配置仅在用户打开 MCP 设置页面时读取，该文件仅含服务器定义，不含任何凭证或令牌。&lt;/p&gt;
+
+        &lt;h2&gt;核心功能&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;上下文感知助手&lt;/strong&gt;：智能编程助手，支持 @文件引用&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;图片支持&lt;/strong&gt;：发送图片可视化描述需求&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Agent 系统&lt;/strong&gt;：内置智能体自动化执行复杂任务&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Skills 命令&lt;/strong&gt;：斜杠命令系统（/init, /review 等）&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;MCP 服务器&lt;/strong&gt;：通过 MCP 协议扩展 AI 能力&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;代码 DIFF&lt;/strong&gt;：可视化代码对比和文件导航&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;对话回退&lt;/strong&gt;：灵活调整对话历史&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;会话管理&lt;/strong&gt;：历史记录、收藏、搜索和导出&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;主题支持&lt;/strong&gt;：深色/浅色主题，支持 IDE 字体同步&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;权限控制&lt;/strong&gt;：完善的安全管理&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;供应商管理&lt;/strong&gt;：兼容 cc-switch&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;h2&gt;使用方法&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;从右侧边栏打开 CC GUI 工具窗口&lt;/li&gt;
+            &lt;li&gt;选中代码后使用 &lt;kbd&gt;Ctrl+Alt+K&lt;/kbd&gt;（Win/Linux）或 &lt;kbd&gt;Cmd+Alt+K&lt;/kbd&gt;（Mac）发送给 AI&lt;/li&gt;
+            &lt;li&gt;即时获得 AI 驱动的代码辅助和智能建议&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;p&gt;&lt;em&gt;Keywords: CCGUI, CC-GUI, Claude, Claude Code, Codex, OpenAI Codex, OpenCode, Gemini, Kimi, Grok, PI CLI, OMP, DeepSeek, Code Generation, AI Coding, AI Coding Assistant&lt;/em&gt;&lt;/p&gt;</description>
+  </plugin>
   <plugin id="com.github.idea-claude-code-gui" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/idea-claude-code-gui-0.6.5.zip" version="0.6.5">
     <idea-version since-build="233" until-build="263.*" />
     <name>CC GUI (Claude, Codex and More)</name>
