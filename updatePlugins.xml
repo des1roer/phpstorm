@@ -317,6 +317,57 @@
     &lt;li&gt;&lt;a href="https://github.com/Haehnchen"&gt;Daniel Espendiller&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
   </plugin>
+  <plugin id="com.intellij.air" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/air-plugin-263.7307.291-windows-x86_64.zip" version="263.7307.291-windows-x86_64">
+    <idea-version since-build="263.7307" until-build="263.*" />
+    <name>Air</name>
+    <description>&lt;p&gt;&lt;b&gt;Air: Agentic development in JetBrains IDEs (EAP)&lt;/b&gt;&lt;/p&gt;
+
+    &lt;p&gt;Run several coding agents in parallel from your JetBrains IDE. Bring the agents and subscriptions you already use, follow their progress, and review their changes alongside your code.&lt;/p&gt;
+
+    &lt;p&gt;Air connects your IDE to your agents. It ships with no agents installed.&lt;/p&gt;
+
+    &lt;h3&gt;Bring your existing agents&lt;/h3&gt;
+    &lt;p&gt;Use your existing provider subscriptions where supported, or connect JetBrains AI. You do not need a JetBrains AI subscription to use supported third-party agents.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Connect Codex, GitHub Copilot, Claude Agent, Junie, and other ACP-compatible agents.&lt;/li&gt;
+      &lt;li&gt;Bring agents already installed on your machine into the IDE. Air detects them for you.&lt;/li&gt;
+      &lt;li&gt;Run Claude Code with your Claude subscription in Air's terminal as a full-screen editor tab.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;IDE intelligence for you and your agents&lt;/h3&gt;
+    &lt;p&gt;Review agent work with the IDE's diffs, navigation, and inspections. Run and validate the code before you accept it.&lt;/p&gt;
+    &lt;p&gt;Supported agents benefit from built-in IDE skills and tools for debugging, performance profiling, database exploration, and semantic code search. This access can improve results and reduce token use for some tasks.&lt;/p&gt;
+
+    &lt;h3&gt;Built for parallel work&lt;/h3&gt;
+    &lt;p&gt;Keep sessions across projects in one place, so you can see what needs your attention and step in when needed.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Track activity, unread updates, changed files, and the cost of each session.&lt;/li&gt;
+      &lt;li&gt;Open sessions as editor tabs alongside your code. Use an agent's terminal interface or a graphical chat.&lt;/li&gt;
+      &lt;li&gt;Double-tap Ctrl to open a prompt window. Press Cmd+2 or Alt+2 to start a session with your current context attached.&lt;/li&gt;
+      &lt;li&gt;Keep parallel tasks separate with temporary Git worktrees. Review changes and commits, then cherry-pick the results into your main project.&lt;/li&gt;
+      &lt;li&gt;Run long tasks in the cloud and keep them running after you close your laptop. Cloud runs currently require an organization with JetBrains AI seats.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;Try it for free&lt;/h3&gt;
+    &lt;p&gt;Try Air in IDEs with free AI, using Junie Lite, a model in Junie agent that uses a cost-efficient model for everyday tasks. Sign in with your JetBrains Account to use it at no charge. This is a temporary offer.*&lt;/p&gt;
+
+    &lt;h3&gt;You stay in control&lt;/h3&gt;
+    &lt;p&gt;You choose which agents to connect. With a third-party subscription, your data goes directly to that provider under your existing agreement. The JetBrains AI Terms of Service apply when you use JetBrains AI.&lt;/p&gt;
+    &lt;p&gt;You can disable the Air plugin at any time.&lt;/p&gt;
+
+    &lt;h3&gt;Get started&lt;/h3&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Install Air from Marketplace, or use the 2026.3 EAP builds of JetBrains IDEs.&lt;/li&gt;
+      &lt;li&gt;Connect an agent through your existing subscription, or sign in to JetBrains AI.&lt;/li&gt;
+      &lt;li&gt;Press Cmd+2 or Alt+2 to start your first session.&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;Installing Air through the notification in AI Assistant disables AI Assistant. You can enable it again in &lt;b&gt;Settings | Plugins&lt;/b&gt;. AI Assistant remains available and supported as a separate plugin.&lt;/p&gt;
+
+    &lt;p&gt;Air is in early access. Try it on a real task and share your feedback on &lt;a href="https://youtrack.jetbrains.com/issues/IJAI"&gt;YouTrack&lt;/a&gt;.&lt;/p&gt;
+
+    &lt;p&gt;&lt;small&gt;*Free access applies to Junie Lite after you sign in with your JetBrains Account. Terms and available models may change.&lt;/small&gt;&lt;/p&gt;</description>
+  </plugin>
   <plugin id="com.anthropic.code.plugin" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/claude-code-jetbrains-plugin-0.1.14-beta.zip" version="0.1.14-beta">
     <idea-version since-build="242" />
     <name>Claude Code [Beta]</name>

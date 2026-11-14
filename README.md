@@ -24,6 +24,12 @@ git add -A && git commit -m "update plugins" && git push
 (`/mnt/c/Program Files/JetBrains/*/product-info.json`, или явно `--build PS-263.7307.215`), скачивает через
 `downloads.marketplace.jetbrains.com`. `--dry-run` только показывает, что нового.
 
+Конкретная версия по ссылке со страницы Marketplace (в том числе bundled-плагины, которых ещё нет в репо):
+
+```bash
+python3 tools/fetch_updates.py https://plugins.jetbrains.com/plugin/33314-air/versions/stable/1220002
+```
+
 Новый плагин: положить архив в корень и так же пересобрать индекс.
 
 Раздача без GitHub (из WSL или Linux): `tools/serve.sh`, в IDE указать `http://localhost:8765/updatePlugins.local.xml`.

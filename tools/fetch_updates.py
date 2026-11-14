@@ -2,6 +2,7 @@
 import argparse
 import importlib.util
 import json
+import re
 import sys
 import urllib.error
 import urllib.parse
@@ -39,17 +40,44 @@ def installed_builds():
     return builds
 
 
-def compatible_updates(build, xml_ids):
-    found = get_json(f"{API}/api/search/compatibleUpdates", {"build": build, "pluginXMLIds": xml_ids})
+def matches_platform(file_path, platform):
+    name = Path(file_path).name.lower()
+    if not re.search(r"-(windows|mac|linux)-", name):
+        return True
+    return f"-{platform}" in name
+
+
+def compatible_updates(build, xml_ids, os_name, arch):
+    query = {"build": build, "pluginXMLIds": xml_ids, "os": os_name, "arch": arch}
+    found = get_json(f"{API}/api/search/compatibleUpdates", query)
     return {u["id"]: (u["pluginXmlId"], u["version"], build) for u in found}
 
 
-def latest_update(xml_id):
+def latest_update(xml_id, platform):
     plugin = get_json(f"{API}/api/plugins/intellij/{urllib.parse.quote(xml_id)}")
-    updates = get_json(f"{API}/api/plugins/{plugin['id']}/updates?size=1")
-    if not updates:
-        return {}
-    return {updates[0]["id"]: (xml_id, updates[0]["version"], "latest")}
+    for update in get_json(f"{API}/api/plugins/{plugin['id']}/updates?size=20"):
+        if matches_platform(update["file"], platform):
+            return {update["id"]: (xml_id, update["version"], "latest")}
+    return {}
+
+
+def update_id_from(text):
+    match = re.search(r"[?&]updateId=(\d+)", text) or re.search(r"/versions/[^/]+/(\d+)", text)
+    if match:
+        return int(match.group(1))
+    if text.isdigit():
+        return int(text)
+    sys.exit(f"no updateId in {text!r}: expected https://plugins.jetbrains.com/plugin/<id>-<name>/versions/<channel>/<updateId>")
+
+
+def explicit_updates(refs):
+    found = {}
+    for ref in refs:
+        update_id = update_id_from(ref.strip())
+        meta = get_json(f"{API}/api/updates/{update_id}")
+        xml_id = get_json(f"{API}/api/plugins/{meta['pluginId']}")["xmlId"]
+        found[update_id] = (xml_id, meta["version"], "url")
+    return found
 
 
 def cdn_url(file_path):
@@ -88,41 +116,49 @@ def main():
     parser.add_argument("--build", action="append", help="IDE build with product code, e.g. PS-263.7307.215")
     parser.add_argument("--no-latest", action="store_true", help="skip the newest version regardless of IDE build")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--os", default="Windows 11.0", help="OS sent to Marketplace for platform-specific plugins")
+    parser.add_argument("--arch", default="X86_64")
+    parser.add_argument("--platform", default="windows-x86_64", help="file name suffix of platform-specific builds to keep")
+    parser.add_argument("refs", nargs="*", help="only these versions: Marketplace version page URL or updateId")
     args = parser.parse_args()
-
-    builds = args.build or installed_builds()
-    if not builds:
-        sys.exit("no IDE builds: pass --build PS-263.7307.215")
 
     local = gen.collect(args.dir)
     have = {(p["id"], p["version"]) for p in local}
     xml_ids = sorted({p["id"] for p in local})
-    print("builds:", ", ".join(builds))
 
-    candidates = {}
+    if args.refs:
+        candidates = explicit_updates(args.refs)
+        builds = []
+    else:
+        candidates = {}
+        builds = args.build or installed_builds()
+        if not builds:
+            sys.exit("no IDE builds: pass --build PS-263.7307.215")
+        print("builds:", ", ".join(builds))
+
     for build in builds:
-        candidates.update(compatible_updates(build, xml_ids))
-    if not args.no_latest:
+        candidates.update(compatible_updates(build, xml_ids, args.os, args.arch))
+    if builds and not args.no_latest:
         for xml_id in xml_ids:
             try:
-                for update_id, found in latest_update(xml_id).items():
+                for update_id, found in latest_update(xml_id, args.platform).items():
                     candidates.setdefault(update_id, found)
             except urllib.error.HTTPError as e:
                 print(f"{'skip':<10}{xml_id:<45}not on Marketplace ({e.code})")
 
     for update_id, (xml_id, version, source) in sorted(candidates.items(), key=lambda c: (c[1][0], c[1][1])):
         if (xml_id, version) in have:
-            print(f"{'have':<10}{xml_id:<45}{version:<24}{source}")
+            print(f"{'have':<10}{xml_id:<45}{version:<32}{source}")
             continue
         if args.dry_run:
-            print(f"{'new':<10}{xml_id:<45}{version:<24}{source}")
+            print(f"{'new':<10}{xml_id:<45}{version:<32}{source}")
             continue
         path, error = download(args.dir, update_id, xml_id)
         if error:
-            print(f"{'FAIL':<10}{xml_id:<45}{version:<24}{error}")
+            print(f"{'FAIL':<10}{xml_id:<45}{version:<32}{error}")
             continue
         have.add((xml_id, version))
-        print(f"{'added':<10}{xml_id:<45}{version:<24}{path.name}")
+        print(f"{'added':<10}{xml_id:<45}{version:<32}{path.name}")
 
 
 if __name__ == "__main__":
