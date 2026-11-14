@@ -9,9 +9,10 @@ IDE читает `updatePlugins.xml` и ставит или обновляет �
 
 | Путь | Что это |
 |---|---|
-| `*.zip`, `*.jar` в корне | архивы плагинов, по одной версии каждого |
+| `*.zip`, `*.jar` в корне | архивы плагинов, у одного плагина может быть несколько версий |
 | `updatePlugins.xml` | индекс для IDE, генерируется, хранится в git |
 | `tools/gen_update_plugins.py` | генератор индекса, только стандартная библиотека Python |
+| `tools/fetch_updates.py` | скачивает новые версии плагинов репо из Marketplace через CDN |
 | `tools/serve.sh` | запасная локальная раздача на `http://localhost:8765` |
 | `grazie/*.jar` | языковые пакеты Grazie, не плагины |
 
@@ -32,7 +33,22 @@ Settings → Plugins → ⚙ → Manage Plugin Repositories → `https://raw.git
 5. Закоммитить архивы вместе с `updatePlugins.xml` и запушить.
 6. Проверить без авторизации: `updatePlugins.xml` и архив по raw-ссылке отдают 200, размер совпадает с исходным файлом.
 
-Билд IDE пользователя: PhpStorm 2026.3, `263.7307.215` (`C:\Program Files\JetBrains\PhpStorm 2026.3\product-info.json`).
+IDE пользователя (все 263): PhpStorm `PS-263.7307.215`, GoLand `GO-263.7307.211`, DataGrip `DB-263.7307.216`, PyCharm `PY-263.7307.206` (`C:\Program Files\JetBrains\*\product-info.json`).
+
+## Обновление из Marketplace
+
+```bash
+python3 -I tools/fetch_updates.py --dry-run
+python3 -I tools/fetch_updates.py
+python3 -I tools/gen_update_plugins.py --build 263.7307.215
+```
+
+- Скачивание с `plugins.jetbrains.com/files/...` и `/pluginManager?action=download` отдаёт 451. API метаданных (`/api/...`) и CDN `downloads.marketplace.jetbrains.com` работают.
+- Логика взята из https://github.com/des1roer/des1roer.github.io (`index.html`, `resolveFromJson`): `GET /api/updates/<updateId>` возвращает поле `file`, архив лежит по `https://downloads.marketplace.jetbrains.com/files/<file>` (каждый сегмент пути url-encode).
+- Кандидаты: `POST /api/search/compatibleUpdates {"build": "PS-263...", "pluginXMLIds": [...]}` для каждой установленной IDE (билд с кодом продукта, PHP-плагины для GO/DB/PY не находятся) и последняя версия вообще: `GET /api/plugins/intellij/<xmlId>`, затем `/api/plugins/<id>/updates?size=1`.
+- Версия, которая уже есть в репо (по id и version из `plugin.xml`), не скачивается. Старые версии скрипт не трогает.
+- Файлы больше 95 МБ пропускаются (лимит GitHub 100 МБ). При совпадении имени файла к нему добавляется `-<updateId>`.
+- Плагины, которых нет в Marketplace, и `grazie/` пропускаются.
 
 ## Устройство генератора
 
