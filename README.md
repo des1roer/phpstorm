@@ -1,16 +1,5 @@
 # phpstorm
 
-https://download.jetbrains.com/webide/PhpStorm-2024.3.1.1.exe
-
-https://download.jetbrains.com/webide/PhpStorm-2024.3.tar.gz видишь страницу 451 вместо редиректа на загрузку. Сам меняешь на
-
-https://download-cdn.jetbrains.com/webide/PhpStorm-2024.3.tar.gz и качай.
-
-
-меняем https://plugins.jetbrains.com/files/9525/155499/idea-php-dotenv-plugin-2022.1.jar?updateId=155499&pluginId=9525&family=INTELLIJ 
-
-на https://downloads.marketplace.jetbrains.com/files/9525/155499/idea-php-dotenv-plugin-2022.1.jar?updateId=155499&pluginId=9525&family=INTELLIJ
-
 ## Свой репозиторий плагинов
 
 Плагины (`*.zip`, `*.jar`) лежат в корне репо. IDE ставит и обновляет их как из Marketplace.
