@@ -615,6 +615,18 @@ in configuration. Reduce errors and accelerate your pipeline development.&lt;/p&
     <description>Provides editing support and diagram preview for
     &lt;a href="https://mermaid.js.org/"&gt;Mermaid&lt;/a&gt; diagramming and charting language.</description>
   </plugin>
+  <plugin id="com.vk.modulite" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/modulite-1.1.12.zip" version="1.1.12">
+    <idea-version since-build="253" />
+    <name>modulite</name>
+    <description>&lt;p&gt;&lt;b&gt;About&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Modulite is a conception that brings modules into the PHP language. PHP does not have native modules (internal classes, private namespaces, explicit exports), and Modulite tries to eliminate this drawback.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;Modulite plugin for PHPStorm deeply integrates into an IDE, allowing you to create modules from folders, declare private classes, and see errors right in the editor. Actually, all "modularity" is represented as .modulite.yaml files, and the plugin is a great UI that visualizes yaml config and provides actions to modify it.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;b&gt;Homepage&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://vkcom.github.io/modulite/"&gt;Landing page&lt;/a&gt; (in Russian)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/VKCOM/modulite"&gt;GitHub&lt;/a&gt;&lt;/p&gt;</description>
+  </plugin>
   <plugin id="com.markskelton.one-dark-theme" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/one-dark-theme-6.2.5.zip" version="6.2.5">
     <idea-version since-build="253" />
     <name>One Dark Theme</name>
