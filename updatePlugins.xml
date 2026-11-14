@@ -233,7 +233,7 @@ for the latest information and troubleshooting tips.&lt;/p&gt;
 &lt;img width="256px" src="https://user-images.githubusercontent.com/5202330/90446158-95982780-e0e9-11ea-8b79-b7215d68a602.png"/&gt;
     </description>
   </plugin>
-  <plugin id="com.github.idea-claude-code-gui" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/idea-claude-code-gui-0.6.4.zip" version="0.6.4">
+  <plugin id="com.github.idea-claude-code-gui" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/idea-claude-code-gui-0.6.5.zip" version="0.6.5">
     <idea-version since-build="233" until-build="263.*" />
     <name>CC GUI (Claude, Codex and More)</name>
     <description>&lt;h2&gt;Multi-engine GUI for Claude Code, Codex, OpenCode &amp; more - MIT 100% Open Source&lt;/h2&gt;
@@ -242,12 +242,12 @@ for the latest information and troubleshooting tips.&lt;/p&gt;
         &lt;ul&gt;
             &lt;li&gt;&lt;strong&gt;Claude Code&lt;/strong&gt; Anthropic 官方 AI 编程助手（支持 Opus 4.6 等多模型）&lt;/li&gt;
             &lt;li&gt;&lt;strong&gt;OpenAI Codex&lt;/strong&gt; - OpenAI 强大的代码生成引擎&lt;/li&gt;
-            &lt;li&gt;&lt;strong&gt;Grok CLI&lt;/strong&gt; &lt;em&gt;(Beta)&lt;/em&gt; - xAI 的 Grok 命令行编程助手&lt;/li&gt;
-            &lt;li&gt;&lt;strong&gt;Kimi CLI&lt;/strong&gt; &lt;em&gt;(Beta)&lt;/em&gt; - 月之暗面 Kimi 编程助手&lt;/li&gt;
-            &lt;li&gt;&lt;strong&gt;OpenCode&lt;/strong&gt; &lt;em&gt;(Beta)&lt;/em&gt; - 开源多模型 AI 编程终端&lt;/li&gt;
-            &lt;li&gt;&lt;strong&gt;PI CLI&lt;/strong&gt; &lt;em&gt;(Beta)&lt;/em&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;strong&gt;OMP CLI&lt;/strong&gt; &lt;em&gt;(Beta)&lt;/em&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;strong&gt;DeepSeek Harness&lt;/strong&gt; &lt;em&gt;(Beta)&lt;/em&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Grok CLI&lt;/strong&gt; - xAI 的 Grok 命令行编程助手&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Kimi CLI&lt;/strong&gt; - 月之暗面 Kimi 编程助手&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;OpenCode&lt;/strong&gt; - 开源多模型 AI 编程终端&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;PI CLI&lt;/strong&gt; - PI 命令行编程助手&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;OMP CLI&lt;/strong&gt; - OMP 命令行编程助手&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;DeepSeek Harness&lt;/strong&gt; - DeepSeek 命令行编程 Harness&lt;/li&gt;
         &lt;/ul&gt;
 
         &lt;p&gt;&lt;strong&gt;Connection &amp;amp; proxy disclosure / 连接与代理说明：&lt;/strong&gt;&lt;/p&gt;
