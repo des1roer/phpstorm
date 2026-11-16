@@ -428,6 +428,69 @@ for the latest information and troubleshooting tips.&lt;/p&gt;
 
     &lt;p&gt;Learn more in our &lt;a href="https://www.jetbrains.com/help/idea/docker.html"&gt;comprehensive documentation&lt;/a&gt;.&lt;/p&gt;</description>
   </plugin>
+  <plugin id="com.intellij.kubernetes" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/clouds-kubernetes-263.7307.240.zip" version="263.7307.240">
+    <idea-version since-build="263.7307" until-build="263.*" />
+    <name>Kubernetes</name>
+    <description>&lt;p&gt;Provides advanced editor and runtime support for &lt;a href="https://kubernetes.io"&gt;Kubernetes&lt;/a&gt;.&lt;/p&gt;
+
+    &lt;p&gt;Features:&lt;/p&gt;
+    &lt;h3&gt;Cluster interaction&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Browsing cluster objects, extracting and editing their configurations, describing them&lt;/li&gt;
+      &lt;li&gt;Viewing events&lt;/li&gt;
+      &lt;li&gt;Cluster-Level Kubernetes log streaming and analysis with Pattern Matching&lt;/li&gt;
+      &lt;li&gt;Attaching pod console&lt;/li&gt;
+      &lt;li&gt;Running shell in pod&lt;/li&gt;
+      &lt;li&gt;Forwarding ports to pod&lt;/li&gt;
+      &lt;li&gt;Applying resource YAML configurations from the editor&lt;/li&gt;
+      &lt;li&gt;Deleting resources from cluster&lt;/li&gt;
+      &lt;li&gt;Completion of ConfigMap/Secret entries from the cluster&lt;/li&gt;
+      &lt;li&gt;Configuring path to &lt;code&gt;kubectl&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Configuring custom kubeconfig files globally and per project&lt;/li&gt;
+      &lt;li&gt;Switching contexts and namespaces&lt;/li&gt;
+      &lt;li&gt;Using API schema (including CRD) from the active cluster for editing resource manifests&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;Editing resource configurations (API 1.16 – 1.31)&lt;/h3&gt;
+    &lt;h3&gt;Rich YAML support&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Auto-completion of keys/values/resource kinds/API versions&lt;/li&gt;
+      &lt;li&gt;"Deep" key auto-completion: invoke Smart Completion when you type -- matching keys from all levels below will be offered&lt;/li&gt;
+      &lt;li&gt;Quick documentation&lt;/li&gt;
+      &lt;li&gt;Detection of invalid/missing/duplicated keys&lt;/li&gt;
+      &lt;li&gt;Detection of non-editable (read only) keys and resources&lt;/li&gt;
+      &lt;li&gt;Detection of deprecated keys and resources&lt;/li&gt;
+      &lt;li&gt;Completion/navigation/find usages/rename of Kubernetes meta-information labels&lt;/li&gt;
+      &lt;li&gt;Completion/navigation/find usages/rename of ConfigMap/Secret entries&lt;/li&gt;
+      &lt;li&gt;Quick jump to matching selector targets and back&lt;/li&gt;
+      &lt;li&gt;Docker image completion (powered by JetBrains Docker plugin)&lt;/li&gt;
+      &lt;li&gt;Enhancements for original Kubernetes model (enums instead of plain strings where applicable)&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;Support for editing Helm templates&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Helm 2.x/3.x file structure/schema support&lt;/li&gt;
+      &lt;li&gt;Go Template syntax support (powered by JetBrains Go Template plugin)&lt;/li&gt;
+      &lt;li&gt;Object values auto-completion/navigation/rename/inspections&lt;/li&gt;
+      &lt;li&gt;Named templates auto-completion/navigation/rename/inspections&lt;/li&gt;
+      &lt;li&gt;Dependency name/version/repository auto-completion&lt;/li&gt;
+      &lt;li&gt;Template result preview&lt;/li&gt;
+      &lt;li&gt;External tgz dependencies content browsing in the project tree&lt;/li&gt;
+      &lt;li&gt;Limited editor support for Werf (https://werf.io) templates and werf.yaml&lt;/li&gt;
+      &lt;li&gt;Quick documentation&lt;/li&gt;
+      &lt;li&gt;validation of values.yaml by values.schema.json (powered by JetBrains JSON plugin)&lt;/li&gt;
+      &lt;li&gt;Useful actions: lint, update dependencies, create chart, create dependency, add repository, convert dependencies from Helm 2.x format to Helm 3.x&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;Editor support for Kustomize configurations (kustomization.yaml)&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Fields completion/validation&lt;/li&gt;
+      &lt;li&gt;Local file path completion/validation&lt;/li&gt;
+      &lt;li&gt;Quick documentation&lt;/li&gt;
+      &lt;li&gt;Kustomize version selection (kubectl embedded, standalone)&lt;/li&gt;
+      &lt;li&gt;Kustomize 3.x inline patches editing support (experimental)&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;Custom resource definition (CRD) support&lt;/h3&gt;
+    Custom resources can be validated by providing complementary OpenAPI 2.0
+    files with CRD schemas and/or CRD resource definitions (YAML) (limited support).</description>
+  </plugin>
   <plugin id="lv.midiana.misc.phpstorm-plugins.deep-keys" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/deep-assoc-completion.jar" version="2022.08.03.001">
     <idea-version since-build="221.1.1" />
     <name>deep-assoc-completion</name>
@@ -717,6 +780,76 @@ in configuration. Reduce errors and accelerate your pipeline development.&lt;/p&
  &lt;/body&gt;
 &lt;/html&gt;</description>
   </plugin>
+  <plugin id="org.jetbrains.security.package-checker" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/packageChecker-263.7307.101.zip" version="263.7307.101">
+    <idea-version since-build="263.7307" until-build="263.*" />
+    <name>Package Checker</name>
+    <description>&lt;p&gt;
+      This plugin checks your third-party dependencies for known vulnerabilities.
+      It suggests a safe version, if available, to make your code more secure.
+      It also scans source code for vulnerable API calls to highlight the most critical problems.
+    &lt;/p&gt;
+    &lt;p&gt;The following package managers and build files are supported:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Amper build system (&lt;code&gt;module.yaml&lt;/code&gt;, &lt;code&gt;module.amper&lt;/code&gt;, &lt;code&gt;project.yaml&lt;/code&gt;, &lt;code&gt;project.amper&lt;/code&gt;, and module template files)&lt;/li&gt;
+      &lt;li&gt;Gradle (&lt;code&gt;build.gradle&lt;/code&gt;, &lt;code&gt;build.gradle.kts&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;Maven (&lt;code&gt;pom.xml&lt;/code&gt;, &lt;code&gt;pom-4.0.0.xml&lt;/code&gt;, &lt;code&gt;pom.*&lt;/code&gt;, &lt;code&gt;*.pom&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;npm, pnpm and Yarn (&lt;code&gt;package.json&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;PyPI (&lt;code&gt;setup.py&lt;/code&gt;, &lt;code&gt;requirements.txt&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;Poetry and Pipenv (&lt;code&gt;pyproject.toml&lt;/code&gt;, &lt;code&gt;Pipfile&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;Go Modules (&lt;code&gt;go.mod&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;Composer (&lt;code&gt;composer.json&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;JPS - JetBrains Project System (&lt;code&gt;*.iml&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;sbt (&lt;code&gt;build.sbt&lt;/code&gt;), provided by the &lt;a href="https://plugins.jetbrains.com/plugin/1347-scala"&gt;Scala plugin&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;The plugin provides the following security inspections:&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+          &lt;a href="https://www.jetbrains.com/help/inspectopedia/VulnerableLibrariesLocal.html"&gt;Vulnerable declared dependency&lt;/a&gt;
+          scans packages defined in your code (such as packages added to a supported build file).
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="https://www.jetbrains.com/help/inspectopedia/VulnerableLibrariesGlobal.html"&gt;Vulnerable imported dependency&lt;/a&gt;
+          detects packages that are not defined in the source code (such as transitive dependencies).
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="https://www.jetbrains.com/help/inspectopedia/VulnerableCodeUsages.html"&gt;Vulnerable API usage&lt;/a&gt;
+          shows vulnerable methods and functions in Java source code (out of the box) and in Kotlin source code (if you have the
+          &lt;a href="https://plugins.jetbrains.com/plugin/6954-kotlin"&gt;Kotlin plugin&lt;/a&gt;
+          installed).
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="https://www.jetbrains.com/help/inspectopedia/MaliciousLibrariesLocal.html"&gt;Malicious dependencies&lt;/a&gt;
+          detects malicious NPM and PyPI dependencies in your project to prevent your software from being compromised.
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;
+      Vulnerable API inspections are language-specific and provided as part of the corresponding language plugins:
+      &lt;a href="https://www.jetbrains.com/help/inspectopedia/NpmVulnerableApiCode.html"&gt;JavaScript and TypeScript&lt;/a&gt;,
+      &lt;a href="https://www.jetbrains.com/help/inspectopedia/PyVulnerableApiCodeInspection.html"&gt;Python&lt;/a&gt;,
+      and &lt;a href="https://www.jetbrains.com/help/inspectopedia/GoVulnerableCodeUsages.html"&gt;Go&lt;/a&gt;.
+    &lt;/p&gt;
+    &lt;p&gt;
+      Here is a list of the plugins required to support the related functionality:
+      &lt;a href="https://plugins.jetbrains.com/plugin/13112-gradle"&gt;Gradle&lt;/a&gt;,
+      &lt;a href="https://www.jetbrains.com/help/idea/maven-support.html"&gt;Maven&lt;/a&gt;,
+      &lt;a href="https://plugins.jetbrains.com/plugin/22069-javascript-and-typescript"&gt;JavaScript and TypeScript&lt;/a&gt;,
+      &lt;a href="https://plugins.jetbrains.com/plugin/631-python"&gt;Python&lt;/a&gt;,
+      &lt;a href="https://plugins.jetbrains.com/plugin/9568-go"&gt;Go&lt;/a&gt;,
+      &lt;a href="https://plugins.jetbrains.com/plugin/6610-php"&gt;PHP&lt;/a&gt;,
+      and &lt;a href="https://plugins.jetbrains.com/plugin/1347-scala"&gt;Scala&lt;/a&gt;.
+    &lt;/p&gt;
+    &lt;p&gt;
+      Problems identified by Package Checker are reported on the &lt;i&gt;Problems | Vulnerable Dependencies&lt;/i&gt; tab.
+      The plugin also provides the &lt;i&gt;Analyze | Vulnerable Dependencies&lt;/i&gt; action.
+    &lt;/p&gt;
+    &lt;p&gt;
+      Package Checker doesn't send information about packages to the JetBrains server in cleartext form.
+      It sends only hashed names of packages.
+      We never log or process hashes we don't have in our database, and we don't analyze your proprietary or confidential packages.
+    &lt;/p&gt;
+    &lt;p&gt;Vulnerability data provided by &lt;a href="https://www.mend.io/?utm_source=JetBrains"&gt;Mend.io&lt;/a&gt; and &lt;a href="https://osv.dev/"&gt;OSV.dev&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;Plugin source code © 2024, JetBrains s.r.o..&lt;/p&gt;</description>
+  </plugin>
   <plugin id="com.kalessil.phpStorm.phpInspectionsEA" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/phpinspectionsea-5.3.0.jar" version="5.3.0">
     <idea-version since-build="243" />
     <name>Php Inspections (EA Extended)</name>
@@ -791,5 +924,12 @@ For Mac shortcuts, see &lt;a href="https://www.jetbrains.com/phpstorm/help/keybo
     <name>JetBrains OS Integration</name>
     <description>Provides operating system integration and &lt;i&gt;jetbrains://&lt;/i&gt; protocol handler support, enabling interaction between your IDE and
     external developer productivity tools.</description>
+  </plugin>
+  <plugin id="Refactor-X" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/xml-refactoring-263.7307.101.zip" version="263.7307.101">
+    <idea-version since-build="263.7307" until-build="263.*" />
+    <name>Refactor-X</name>
+    <description>New automated XML refactorings for IntelliJ IDEA
+        &lt;p&gt;&lt;/p&gt;
+        &lt;p&gt;Originally developed by Sixth and Red River Software.&lt;/p&gt;</description>
   </plugin>
 </plugins>
