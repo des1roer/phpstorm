@@ -748,6 +748,29 @@ in configuration. Reduce errors and accelerate your pipeline development.&lt;/p&
 &lt;p&gt;&lt;a href="https://vkcom.github.io/modulite/"&gt;Landing page&lt;/a&gt; (in Russian)&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/VKCOM/modulite"&gt;GitHub&lt;/a&gt;&lt;/p&gt;</description>
   </plugin>
+  <plugin id="NodeJS" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/nodeJS-263.7307.211.zip" version="263.7307.211">
+    <idea-version since-build="263.7307" until-build="263.*" />
+    <name>Node.js</name>
+    <description>Provides &lt;a href="https://nodejs.org/"&gt;Node.js&lt;/a&gt; support to all JetBrains IDEs that
+   &lt;a href="https://www.jetbrains.com/products/#lang=js&amp;type=ide"&gt;support JavaScript&lt;/a&gt;.
+
+  &lt;h3&gt;Features&lt;/h3&gt;
+  &lt;ul&gt;
+  &lt;li&gt;Node.js debugging attachable to a running process&lt;/li&gt;
+  &lt;li&gt;Node.js profiler&lt;/li&gt;
+  &lt;li&gt;Mocha test debugging and running inside the IDE&lt;/li&gt;
+  &lt;li&gt;New Express projects from the Welcome screen&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h3&gt;Getting started&lt;/h3&gt;
+  For information on getting started, head over to the &lt;a href="https://www.jetbrains.com/help/"&gt;documentation&lt;/a&gt; for your IDE.
+  For WebStorm, you can check out this section in the &lt;a href="https://www.jetbrains.com/help/webstorm/developing-node-js-applications.html"&gt;documentation&lt;/a&gt;.
+
+  &lt;h3&gt;Notes&lt;/h3&gt;
+  You can also run and debug Node.js applications in remote environments such as Docker containers, Vagrant machines,
+  and remote servers right from the IDE. For that, please install the
+  &lt;a href="https://plugins.jetbrains.com/plugin/8116-node-js-remote-interpreter"&gt;Node.js Remote Interpreter&lt;/a&gt; plugin.</description>
+  </plugin>
   <plugin id="com.markskelton.one-dark-theme" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/one-dark-theme-6.2.5.zip" version="6.2.5">
     <idea-version since-build="253" />
     <name>One Dark Theme</name>
