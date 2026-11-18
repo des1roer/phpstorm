@@ -948,6 +948,46 @@ For Mac shortcuts, see &lt;a href="https://www.jetbrains.com/phpstorm/help/keybo
     <description>Provides operating system integration and &lt;i&gt;jetbrains://&lt;/i&gt; protocol handler support, enabling interaction between your IDE and
     external developer productivity tools.</description>
   </plugin>
+  <plugin id="com.intellij.swagger" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/swagger-262.12573.12.zip" version="262.12573.12">
+    <idea-version since-build="262.12573" until-build="262.*" />
+    <name>OpenAPI Specifications</name>
+    <description>&lt;a href="https://www.openapis.org/"&gt;OpenAPI&lt;/a&gt; and Swagger specification files support.
+    &lt;p&gt;
+    &lt;p&gt;
+      Features:
+    &lt;ul&gt;
+      &lt;li&gt;OpenAPI 3, Swagger 2 and AsyncAPI 2 versions.&lt;/li&gt;
+      &lt;li&gt;YAML and JSON file formats.&lt;/li&gt;
+      &lt;li&gt;Validation by JSON Schema.&lt;/li&gt;
+      &lt;li&gt;Navigation, completion, and rename refactoring for URLs.&lt;/li&gt;
+      &lt;li&gt;Code generation with Swagger Codegen and OpenAPI Generator.&lt;/li&gt;
+      &lt;li&gt;Integrated Swagger UI/Redoc previews in the specification editor.&lt;/li&gt;
+      &lt;li&gt;Structural diff action for specifications.&lt;/li&gt;
+      &lt;li&gt;URL completion in the HTTP Client by specifications.&lt;/li&gt;
+      &lt;li&gt;Structure view for OpenAPI files.&lt;/li&gt;
+      &lt;li&gt;Remote specifications via URL or from Swagger Hub.&lt;/li&gt;
+    &lt;/ul&gt;</description>
+  </plugin>
+  <plugin id="com.intellij.swagger" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/swagger-263.7307.209.zip" version="263.7307.209">
+    <idea-version since-build="263.7307" until-build="263.*" />
+    <name>OpenAPI Specifications</name>
+    <description>&lt;a href="https://www.openapis.org/"&gt;OpenAPI&lt;/a&gt; and Swagger specification files support.
+    &lt;p&gt;
+    &lt;p&gt;
+      Features:
+    &lt;ul&gt;
+      &lt;li&gt;OpenAPI 3, Swagger 2 and AsyncAPI 2 versions.&lt;/li&gt;
+      &lt;li&gt;YAML and JSON file formats.&lt;/li&gt;
+      &lt;li&gt;Validation by JSON Schema.&lt;/li&gt;
+      &lt;li&gt;Navigation, completion, and rename refactoring for URLs.&lt;/li&gt;
+      &lt;li&gt;Code generation with Swagger Codegen and OpenAPI Generator.&lt;/li&gt;
+      &lt;li&gt;Integrated Swagger UI/Redoc previews in the specification editor.&lt;/li&gt;
+      &lt;li&gt;Structural diff action for specifications.&lt;/li&gt;
+      &lt;li&gt;URL completion in the HTTP Client by specifications.&lt;/li&gt;
+      &lt;li&gt;Structure view for OpenAPI files.&lt;/li&gt;
+      &lt;li&gt;Remote specifications via URL or from Swagger Hub.&lt;/li&gt;
+    &lt;/ul&gt;</description>
+  </plugin>
   <plugin id="Refactor-X" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/xml-refactoring-263.7307.101.zip" version="263.7307.101">
     <idea-version since-build="263.7307" until-build="263.*" />
     <name>Refactor-X</name>
