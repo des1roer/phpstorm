@@ -11,7 +11,7 @@ from pathlib import Path
 
 API = "https://plugins.jetbrains.com"
 CDN = "https://downloads.marketplace.jetbrains.com/files/"
-JETBRAINS_DIR = Path("/mnt/c/Program Files/JetBrains")
+JETBRAINS_DIR = Path("C:/Program Files/JetBrains")
 GITHUB_FILE_LIMIT = 95 * 1024 * 1024
 HEADERS = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
 

@@ -41,7 +41,7 @@ def is_compatible(build, since, until):
 
 def collect(folder):
     plugins = []
-    for path in sorted(p for p in folder.iterdir() if p.suffix in (".zip", ".jar")):
+    for path in sorted((p for p in folder.iterdir() if p.suffix in (".zip", ".jar")), key=lambda p: p.name):
         raw = read_plugin_xml(path)
         if raw is None:
             print(f"skip {path.name}: {PLUGIN_XML} not found", file=sys.stderr)
@@ -70,7 +70,8 @@ def write_xml(plugins, base_url, target):
         ET.SubElement(node, "name").text = p["name"]
         ET.SubElement(node, "description").text = p["description"]
     ET.indent(root)
-    ET.ElementTree(root).write(target, encoding="utf-8", xml_declaration=True)
+    with open(target, "wb") as f:
+        ET.ElementTree(root).write(f, encoding="utf-8", xml_declaration=True)
 
 
 def main():
