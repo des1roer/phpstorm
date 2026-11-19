@@ -953,6 +953,27 @@ For Mac shortcuts, see &lt;a href="https://www.jetbrains.com/phpstorm/help/keybo
     <description>Provides operating system integration and &lt;i&gt;jetbrains://&lt;/i&gt; protocol handler support, enabling interaction between your IDE and
     external developer productivity tools.</description>
   </plugin>
+  <plugin id="intellij.python.dap.plugin" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/python-dap-263.7307.200.zip" version="263.7307.200">
+    <idea-version since-build="263.7307" until-build="263.*" />
+    <name>Python DAP Debugger</name>
+    <description>&lt;p&gt;Adds a Python debugger backend powered by
+    &lt;a href="https://github.com/microsoft/debugpy"&gt;debugpy&lt;/a&gt; and the
+    &lt;a href="https://microsoft.github.io/debug-adapter-protocol/"&gt;Debug Adapter Protocol (DAP)&lt;/a&gt;
+    to all &lt;a href="https://www.jetbrains.com/products/#lang=js&amp;amp;type=ide"&gt;JetBrains IDEs&lt;/a&gt; that support Python.&lt;/p&gt;
+
+    &lt;h3&gt;Key improvements over the default pydevd backend&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;b&gt;Lower debugging overhead&lt;/b&gt; — especially on Python 3.12+ thanks to PEP 669 monitoring hooks.&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;More stable connection model&lt;/b&gt; — communicates with the debugger through DAP, reducing hangs and connection-related failures.&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Support for all standard run configurations&lt;/b&gt; — Python scripts, pytest, unittest, doctest, nosetest, tox, Trial, and uv.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;After installation, switch to the debugpy backend via the &lt;b&gt;Mode&lt;/b&gt; selector in the Debug tool window toolbar.&lt;/p&gt;
+
+    &lt;p&gt;&lt;b&gt;Requirements:&lt;/b&gt; Python 3.9 or later. Local interpreters only (remote interpreters are not yet supported).&lt;/p&gt;
+
+    &lt;a href="https://youtrack.jetbrains.com/issues/PY?q=Subsystem:%20Debugger%20tag:%20debugpy"&gt;Issue tracker&lt;/a&gt;&lt;br&gt;</description>
+  </plugin>
   <plugin id="com.intellij.swagger" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/swagger-262.12573.12.zip" version="262.12573.12">
     <idea-version since-build="262.12573" until-build="262.*" />
     <name>OpenAPI Specifications</name>
