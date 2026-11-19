@@ -730,6 +730,11 @@ in configuration. Reduce errors and accelerate your pipeline development.&lt;/p&
 
         &lt;p&gt;&lt;em&gt;Keywords: CCGUI, CC-GUI, Claude, Claude Code, Codex, OpenAI Codex, OpenCode, Gemini, Kimi, Grok, PI CLI, OMP, DeepSeek, Code Generation, AI Coding, AI Coding Assistant&lt;/em&gt;&lt;/p&gt;</description>
   </plugin>
+  <plugin id="com.intellij.bigdatatools.kafka" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/intellij-v253.25910.2.zip" version="253.25910.2">
+    <idea-version since-build="253.28294" />
+    <name>Confluent</name>
+    <description>Work with Confluent and Apache Kafka to design, build and run data streaming applications.</description>
+  </plugin>
   <plugin id="com.intellij.mermaid" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/mermaid-263.7307.200.zip" version="263.7307.200">
     <idea-version since-build="263.7307" until-build="263.*" />
     <name>Mermaid</name>
