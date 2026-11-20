@@ -537,6 +537,20 @@ for the latest information and troubleshooting tips.&lt;/p&gt;
 &lt;img width="256px" src="https://user-images.githubusercontent.com/5202330/90446158-95982780-e0e9-11ea-8b79-b7215d68a602.png"/&gt;
     </description>
   </plugin>
+  <plugin id="com.sberworks.sberai.jarvis" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/gigacode-jetbrains-26.11.4-242.zip" version="26.11.4-242">
+    <idea-version since-build="242" until-build="271.*" />
+    <name>GigaCode</name>
+    <description>&lt;p&gt;&lt;strong&gt;GigaCode&lt;/strong&gt; is an AI code assistant which supports you in better and efficient coding, helping to increase your
+productivity with realtime code completions and code generation.
+GigaCode provides whole-line, full-function, full-scope and natural language to code completions instantly in
+your IDE editor.&lt;/p&gt;
+
+&lt;p&gt;Currently, GigaCode is serving for more than 15 programming languages with the models tuned to provide fast and
+accurate suggestions.&lt;/p&gt;
+
+&lt;p&gt;Join GigaCode users to boost your efficiency, accelerate development process, improve code quality and keep
+yourself in the flow.&lt;/p&gt;</description>
+  </plugin>
   <plugin id="com.github.deeepamin.gitlabciaid" url="https://raw.githubusercontent.com/des1roer/phpstorm/main/gitlab-ci-aid-2.1.0.zip" version="2.1.0">
     <idea-version since-build="261" />
     <name>CI Aid for GitLab</name>
